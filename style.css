@@ -1,3 +1,14 @@
+/* Prevent horizontal overflow */
+.why-choose {
+  overflow-x: hidden;
+}
+
+/* Optional: ensure all child elements are also contained */
+.why-choose * {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
 /* Reset and base styles */
 body {
   margin: 0;
@@ -133,10 +144,18 @@ h1, h2, h3 {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  grid-template-columns: repeat(2, 1fr); /* ✅ Always 2 columns by default */
   gap: 30px;
   padding: 0 20px;
 }
+
+
+/* .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+  gap: 30px;
+  padding: 0 20px;
+} */
 
 .feature-box {
   background-color: #f0f0ff;
@@ -275,9 +294,9 @@ h1, h2, h3 {
   object-fit: contain;
   /* transition: transform 0.3s ease; */
 }
-.tech-logos img:hover {
-  /* transform: scale(1.1); */
-}
+/* .tech-logos img:hover {
+  /* transform: scale(1.1); }*/
+
 
 
 .cta-section {
@@ -346,3 +365,8 @@ h1, h2, h3 {
   transform: scale(1.2);
 }
 
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr; /* ✅ Stack on small screens */
+  }
+}
