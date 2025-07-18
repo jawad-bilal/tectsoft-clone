@@ -12,12 +12,16 @@
 /* Reset and base styles */
 body {
   margin: 0;
-  font-family: 'Red Hat Text', sans-serif;
-  background-color: #121341;
+  font-family: 'Poppins', sans-serif;
+  /* background-color: #121341; */
   color: white;
 }
-h1, h2, h3 {
-  font-weight: 700; /* or 900 for boldest emphasis */
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  /* or 900 for boldest emphasis */
 }
 
 /* Navbar */
@@ -37,7 +41,7 @@ h1, h2, h3 {
 .icons img {
   width: 24px;
   margin-left: 20px;
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
 }
 
 /* Hero Section */
@@ -45,44 +49,45 @@ h1, h2, h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 60px 40px;
-  gap: 40px;
+  padding: 115px 40px;
+  gap: 20px;
+  /* max-height: 1200px; */
+  background-color: rgb(15, 15, 62);
+  padding-top: 60px;
 }
 
 .hero-text {
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .subtitle {
-  color: #ffc107;
+  color: rgb(215, 215, 59);
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .hero-text h1 {
-  font-size: 42px;
+  font-size: 52px;
   font-weight: 800;
   line-height: 1.3;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  margin-top: 15px;
 }
 
 .cta-button {
   background-color: #2962ff;
   color: white;
   padding: 20px 40px;
-  /* border-radius: 4px; */
   text-decoration: none;
   font-weight: 600;
 }
 
-/* .cta-button:hover {
-  background-color: #0039cb;
-} */
 
 /* Hero Image */
 .hero-image {
   position: relative;
-  max-width: 400px;
+  max-width: 550px;
+  margin-top: 15px;
 }
 
 .hero-image img {
@@ -90,34 +95,41 @@ h1, h2, h3 {
   border-radius: 16px;
 }
 
-.tech-tags {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
 
 /* Stats Section */
 .stats {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  transform: translateY(-84px);
+}
+
+.stats #stats {
   background-color: black;
+  justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 40px 20px;
+  width: 90%;
   margin: 0px auto;
-  margin-top: 0px;
-  text-align: center;
+  padding: 10px 10px;
+  /* margin: 10px; */
 }
 
 .stats .number {
   font-size: 36px;
   font-weight: bold;
-  color: #ffc107;
-  margin-bottom: 8px;
+  color: rgb(255, 244, 29);
+  margin-bottom: 24px;
 }
+
+.stats .number p {
+  margin: 24px 0px;
+}
+
 /* new code above */
 /* Why Choose Us Section */
 .why-choose {
@@ -144,7 +156,8 @@ h1, h2, h3 {
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ✅ Always 2 columns by default */
+  grid-template-columns: repeat(2, 1fr);
+  /* ✅ Always 2 columns by default */
   gap: 30px;
   padding: 0 20px;
 }
@@ -180,10 +193,10 @@ h1, h2, h3 {
 
 .expertise-section {
   text-align: center;
-  padding: 100px 20px;
+  padding: 20px 40px;
   background-color: #fff;
   color: black;
-  
+
 }
 
 .section-tag {
@@ -217,7 +230,7 @@ h1, h2, h3 {
 
 .expertise-box {
   background-color: #111;
-  padding: 40px 30px;
+  padding: 40px 20px;
   /* border-radius: 10px; */
   color: #fff;
   text-align: left;
@@ -252,55 +265,64 @@ h1, h2, h3 {
   margin: auto; */
 }
 
+.expertise-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 20px; */
+}
+
 .expertise-image img {
   max-width: 100%;
   border-radius: 5px;
-  margin-top: 10px;
-  /* display: block; */
+  margin-top: 20px;
+  /* display: flex; */
+  /* flex-direction: row; */
   align-items: center;
   justify-content: center;
 }
 
 .tech-stack {
   text-align: center;
-  padding: 80px 20px;
+  padding: 20px 40px;
   background-color: #fff;
   color: #000;
 }
+
 .tech-stack h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 10px;
 }
+
 .tech-stack p {
   color: #666;
   font-size: 1rem;
   margin-bottom: 30px;
 }
+
 .divider {
   width: 60px;
   border: 2px solid #ccc;
   margin: 0 auto 40px;
 }
+
 .tech-logos {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
+  gap: 40px;
+  justify-content: space-around;
   align-items: center;
 }
+
 .tech-logos img {
   height: 40px;
   object-fit: contain;
-  /* transition: transform 0.3s ease; */
+
 }
-/* .tech-logos img:hover {
-  /* transform: scale(1.1); }*/
-
-
 
 .cta-section {
-  background: #0b0f3b url("images/code-bg.png") no-repeat center/cover;
+  background: #0b0f3b;
   color: white;
   padding: 80px 40px;
   display: flex;
@@ -308,29 +330,25 @@ h1, h2, h3 {
   justify-content: space-between;
   align-items: center;
 }
+
 .cta-text h2 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 15px;
 }
+
 .cta-text p {
   font-size: 1rem;
   color: #ddd;
 }
+
 .cta-btn {
   background-color: #3b4fe4;
   padding: 15px 30px;
-  color: #fff;
+  color: rgb(255, 255, 255);
   font-weight: 600;
-  /* border-radius: 8px; */
   text-decoration: none;
-  transition: background 0.3s ease;
 }
-.cta-btn:hover {
-  background-color: #1a32c6;
-}
-
-
 
 .site-footer {
   background-color: #000;
@@ -338,6 +356,7 @@ h1, h2, h3 {
   text-align: center;
   padding: 40px 20px;
 }
+
 .footer-brand {
   display: flex;
   justify-content: center;
@@ -345,28 +364,34 @@ h1, h2, h3 {
   gap: 10px;
   margin-bottom: 20px;
 }
+
 .footer-brand img {
   height: 30px;
 }
+
 .footer-brand p {
   font-weight: 700;
   font-size: 1.2rem;
 }
+
 .footer-socials {
   margin-bottom: 20px;
 }
+
 .footer-socials a img {
   height: 20px;
   margin: 0 10px;
   filter: brightness(100);
   transition: transform 0.3s ease;
 }
+
 .footer-socials a img:hover {
-  transform: scale(1.2);
+  transform: scale(2.0);
 }
 
 @media (max-width: 768px) {
   .features-grid {
-    grid-template-columns: 1fr; /* ✅ Stack on small screens */
+    grid-template-columns: 1fr;
+    /* ✅ Stack on small screens */
   }
 }
